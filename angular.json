@@ -23,9 +23,41 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/style.css",
+              "assets/css/fullpage.css",
+              "assets/css/bootstrap.min.css",
+              "assets/css/animate.css",
+              "assets/css/owl.carousel.min.css",
+              "assets/css/style.css",
+              "assets/css/all.min.css",
+              "assets/css/font-awesome.min.css",
+              "assets/css/timeline.css",
+              "assets/css/css3clock.css",
+              "assets/css/simple-lightbox.css"
             ],
-            "scripts": []
+            "scripts": [
+              "assets/js/wow.js",
+              "assets/js/cylsys.js",
+              "assets/js/custom.js",
+              "assets/js/jquery.js",
+              "assets/js/fullpage.js",
+              "assets/js/bootstrap.min.js",
+              "assets/js/owl.carousel.min.js",
+              "assets/js/index.js",
+              "assets/js/index2.js",
+              "assets/js/script.js",
+              "assets/js/email.js",
+              "assets/js/internal.js",
+              "assets/js/slider.js",
+              "assets/js/simple-lightbox.js",
+              "assets/js/mobile-app.js",
+              "assets/js/simple-lightbox.js",
+              "assets/js/jssor.slider-28.1.0.min.js",
+              "assets/js/chatbot.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -97,5 +129,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "26564e77-7567-40bf-8501-1b4915f2b940"
   }
 }
