@@ -1,0 +1,89 @@
+/* .img-fluid{
+    max-width: 100%;
+    height: 100px;
+} */
+
+.carousel-control-prev {
+    position: relative;
+    left: -7%;
+    top: 47%;
+    height: 50px;
+    width: 50px;
+    border: 1px solid;
+    border-radius: 5px;
+    transform: rotate(136deg);
+    background: linear-gradient(
+      to right,
+      rgba(232, 243, 226, 1) 0%,
+      rgba(225, 241, 238, 1) 51%,
+      rgba(219, 239, 250, 1) 100%
+    ) !important;
+    transition-duration: 0.4s;
+    outline: none;
+  }
+  
+  .carousel-control-prev:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(102, 174, 61, 1) 0%,
+      rgba(1, 149, 217, 1) 100%
+    ) !important;
+  }
+  
+  .carousel-control-prev span {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    transform: rotate(-136deg);
+    font-size: 30px;
+    color: #00000036;
+  }
+  
+  .carousel-control-prev span:hover {
+    color: #fff;
+  }
+  
+  .carousel-control-next {
+    position: relative;
+    left: 98%;
+    height: 50px;
+    width: 50px;
+    top: 47%;
+    border: 1px solid;
+    border-radius: 5px;
+    transform: rotate(136deg);
+    background: linear-gradient(
+      to right,
+      rgba(232, 243, 226, 1) 0%,
+      rgba(225, 241, 238, 1) 51%,
+      rgba(219, 239, 250, 1) 100%
+    ) !important;
+    transition-duration: 0.4s;
+    outline: none;
+  }
+  
+  .carousel-control-next:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(102, 174, 61, 1) 0%,
+      rgba(1, 149, 217, 1) 100%
+    ) !important;
+  }
+  
+  .carousel-control-next span {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    transform: rotate(-136deg);
+    font-size: 30px;
+    color: #00000036;
+  }
+  
+  .carousel-control-next span:hover {
+    color: #fff;
+  }
+  

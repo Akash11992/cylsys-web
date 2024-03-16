@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -8,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   constructor() { }
+  showScrollTop: boolean = false;
 
-  ngOnInit(): void {
+  ngOnInit() {}
+
+  @HostListener('window:scroll', [])
+  
+  onWindowScroll() {
+    this.showScrollTop = window.scrollY >= 50;
   }
 
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
