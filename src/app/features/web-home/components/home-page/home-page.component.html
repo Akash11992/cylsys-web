@@ -1,335 +1,6 @@
-    <!-- Modal body start-->
-    <div class="modal" id="myModal">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content bg-quick-contact">
-          <!-- Modal Header -->
-          <div class="modal-body p-0">
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-6 border-right homeform">
-                  <p>
-                    "Cylsys understands how to run a business and to sustain a
-                    long term business relation with clients."
-                  </p>
-                  <p class="pt-4">
-                    <img
-                      src="assets/images/pawasgoyal.jpg"
-                      width="60px"
-                      class="mr-3 rounded-circle float-left"
-                      alt="Pawas Goyal"
-                    />
-                    <strong>Pawas Goyal</strong><br />
-                    <span class="small"
-                      >CEO of Cylsys Software Solution Pvt Ltd</span
-                    >
-                  </p>
 
-                  <h4 class="mt-5">For Sales Enquiry</h4>
-                  <p>
-                    +91 99675 02270<br />
-                    <a href="mailto:reachus@cylsys.com">reachus@cylsys.com</a
-                    ><br />
-                    <a
-                      href="https://www.facebook.com/cylsyssoftwaresolutionpvtltd"
-                      ><i
-                        class="fab fa-facebook social mr-2"
-                        aria-label="Facebook"
-                      ></i
-                    ></a>
-                    <a href="https://www.linkedin.com/company/2310187"
-                      ><i
-                        class="fab fa-linkedin-in social mr-2"
-                        aria-label="Linkedin"
-                      ></i
-                    ></a>
-                    <!-- <a href="https://www.skype.com/pawasgoyal"><i class="fab fa-skype social mr-2"></i></a> -->
-                  </p>
-                  <div class="certificate">
-                    <img
-                      src="assets/images/fourteen_year.jpg"
-                      alt="twelve_year"
-                      width="50"
-                      class="rounded-circle"
-                    />
-                    <img
-                      src="assets/images/iso.png"
-                      alt="ten years"
-                      width="50"
-                      class="rounded-circle"
-                    />
-                    <img
-                      src="assets/images/most-innovative-companies.png"
-                      alt="The Most Innovative Companies"
-                      class="rounded-circle"
-                      width="50"
-                    />
-                    <img
-                      src="assets/images/iso9001.jpg"
-                      alt="The Most Innovative Companies"
-                      class="rounded-circle"
-                      width="50"
-                    />
-                    <img
-                      src="assets/images/iso27001.jpg"
-                      alt="The Most Innovative Companies"
-                      class="rounded-circle"
-                      width="50"
-                    />
-                    <a
-                      href="https://sur.ly/awards-generic/api/track/click/a2a7052327c614f00beec781bc3ec109"
-                    >
-                      <img
-                        src="assets/images/web safety.png"
-                        alt="web safety img"
-                        class="rounded-circle"
-                        width="50"
-                    /></a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="section-title">
-                    <div class="heading">
-                      <h2>Request a Quote</h2>
-                    </div>
-                  </div>
-                  <div class="bg-quick-contact p-0" style="box-shadow: none">
-                    <form method="post">
-                      <div class="">
-                        <input
-                          type="text"
-                          class="form-control mb-1"
-                          id="inlineFormInput"
-                          placeholder="Name"
-                          name="Name"
-                          ng-model="enquiry.Name"
-                          required
-                        />
-                      </div>
-                      <div class="">
-                        <div class="input-group mb-1">
-                          <input
-                            type="email"
-                            class="form-control text-ridus"
-                            id="inlineFormInputGroup"
-                            placeholder="Email"
-                            name="Email"
-                            ng-model="enquiry.Email"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="">
-                        <div class="input-group mb-1">
-                          <input
-                            type="Phone"
-                            class="form-control text-ridus"
-                            id="inlineFormInputGroup"
-                            placeholder="Phone"
-                            name="Phone"
-                            ng-model="enquiry.Phone"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="">
-                        <div class="input-group mb-1">
-                          <select
-                            class="form-control text-ridus"
-                            ng-model="enquiry.Service"
-                          >
-                            <option>Services</option>
-                            <option>RPA TOOLS</option>
-                            <option>Digital Marketing</option>
-                            <option>UI/UX Design</option>
-                            <option>Software Development</option>
-                            <option>Mobile Development</option>
-                            <option>Data Analytics</option>
-                            <option>Hire Developer(Staffing)</option>
-                            <option>Other</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <textarea
-                          class="form-control"
-                          rows="3"
-                          id="comment"
-                          placeholder="Requirement Brief*"
-                          ng-model="enquiry.Requirment"
-                          name="Requirement"
-                        ></textarea>
-                      </div>
-                      <div class="form-group">
-                        <div class="form-check p-0">
-                          <label
-                            class="form-check-label small"
-                            for="invalidCheck2"
-                          >
-                            Cylsys can contact me with given information. View
-                            our
-                            <a href="privacy-policy.html">Privacy Policy</a>
-                            &amp; <a href="terms-of-use.html"> Terms of use</a>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="submit-form">
-                        <div class="row">
-                          <div class="col-md-5">
-                            <button
-                              class="btn btn-primary w-100"
-                              type="submit "
-                              ng-click="submit(enquiry) "
-                            >
-                              Submit
-                            </button>
-                          </div>
-                          <div class="col-md-7">
-                            <a
-                              class="btn btn-success w-100"
-                              type="submit "
-                              aria-label="Chat on WhatsApp"
-                              href="https://wa.me/+919967502270"
-                            >
-                              <i
-                                class="fab fa-whatsapp social mr-2"
-                                aria-label="Whatsapp"
-                              ></i>
-                              Chat on WhatsApp
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal body end-->
-    <!-- JOIN OUR TEAM Start-->
-    <div class="modal" id="myModal1">
-      <div class="modal-dialog">
-        <div class="modal-content bg-quick-contact">
-          <!-- Modal Header -->
-          <div class="modal-header mb-1 p-0 border-0">
-            <h4 class="modal-title">JOIN OUR TEAM</h4>
-            <button type="button" class="close" data-dismiss="modal">
-              &times;
-            </button>
-          </div>
-          <!-- Modal body -->
-          <div class="modal-body p-0">
-            <div class="">
-              <form method="post" enctype="multipart/form-data" name="form1">
-                <div class="">
-                  <div class="input-group mb-1">
-                    <input
-                      type="text"
-                      class="form-control text-ridus"
-                      id="inlineFormInput"
-                      placeholder="Name"
-                      name="Name"
-                      ng-model="enquiry.Name"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="">
-                  <div class="input-group mb-1">
-                    <input
-                      type="email"
-                      class="form-control text-ridus"
-                      id="inlineFormInputGroup"
-                      placeholder="Email"
-                      name="Email"
-                      ng-model="enquiry.Email"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="">
-                  <div class="input-group mb-1">
-                    <input
-                      type="Phone"
-                      class="form-control text-ridus"
-                      id="inlineFormInputGroup"
-                      placeholder="Phone"
-                      ng-model="enquiry.Phone"
-                      name="Phone"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="">
-                  <div class="input-group mb-1">
-                    <input
-                      type="text"
-                      class="form-control text-ridus"
-                      id="inlineFormInputGroup"
-                      placeholder="Position"
-                      name="Position"
-                      ng-model="enquiry.position"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="">
-                  <div class="form-group file-upload mb-1">
-                    <input
-                      type="file"
-                      class="form-control-file"
-                      id="exampleFormControlFile1"
-                      name="Filedata"
-                      ng-model="enquiry.file"
-                    />
-                  </div>
-                </div>
-                <div class="form-group mb-1">
-                  <textarea
-                    class="form-control"
-                    rows="3"
-                    id="comment"
-                    placeholder="Requirement Brief*"
-                    name="Requirement"
-                    ng-model="enquiry.Requirment"
-                    required
-                  ></textarea>
-                </div>
-                <div class="form-group">
-                  <div class="form-check text-center">
-                    <label class="form-check-label" for="invalidCheck2">
-                      Cylsys can contact me with given information. View our
-                      <a href="privacy-policy.html">Privacy Policy</a> &
-                      <a href="terms-of-use.html"> Terms of use </a>
-                    </label>
-                  </div>
-                </div>
-                <div class="submit-form">
-                  <button
-                    class="btn btn-primary"
-                    type="submit"
-                    ng-click="submit(enquiry,'Career')"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+
     <!--JOIN OUR TEAM End-->
     <!--start-->
     <div id="fullpage" class="headnum">
@@ -385,9 +56,7 @@
                 <div class="text-animation-wrap">
                   <h3>We build amazing</h3>
                   <div class="test alignas">
-                    <!-- <p class="header-sub-title" id="word"></p>
-                    <p class="header-sub-title blink">|</p> -->
-                    <ngx-typed-js [strings]="['WEB APPS...', 'WEB DEVELOPMENT', 'DIGITAL MARKETING']"[loop]="true" [shuffle]="true" [typeSpeed]="300">
+                     <ngx-typed-js [strings]="['WEB APPS...', 'WEB DEVELOPMENT', 'DIGITAL MARKETING']"[loop]="true" [shuffle]="true" [typeSpeed]="300">
                       <span class="typing header-sub-title"></span>
                     </ngx-typed-js>
                   </div>
@@ -895,7 +564,7 @@
           </div>
           <!-- <div class="client-slider-section">
             <div class="carousel-wrap">
-              <div class="owl-carousel" #clientList1 id="client-slider" *ngFor="let item of this.clientImgArr">
+              <div class="owl-carousel"  id="client-slider" *ngFor="let item of this.clientImgArr">
                slide 1 -->
                 <!-- <div class="{{item.name}}">
                   <div class="client-img">
@@ -1362,7 +1031,7 @@
           <div class="heading">
             <h2 class="">TECHNOLOGY STACK</h2>
           </div>
-          <div class="row text-center">
+          <!-- <div class="row text-center">
             <div
               id="carouselExampleControls"
               class="carousel slide"
@@ -1391,8 +1060,8 @@
                   data-slide-to="4"
                 ></li>
               </ol>
-              <div class="carousel-inner mb-5">
-                <div class="carousel-item active">
+              <div class="carousel-inner mb-5"  #clientList1>
+                <div class="carousel-item active" >
                   <h4>Front-end UI</h4>
                   <img
                     class="d-block col-md-3 col-4 float-left"
@@ -1575,7 +1244,6 @@
                     src="assets/images/tech/dml6.jpg"
                     alt="Technology Stack"
                   />
-                  <!-- <img class="d-block col-md-3 col-4 float-left" src="assets/images/tech/dml7.jpg" alt="Technology Stack"> -->
                   <img
                     class="d-block col-md-3 col-4 float-left"
                     src="assets/images/tech/dml8.jpg"
@@ -1676,7 +1344,25 @@
               ></span>
               <span class="sr-only">Next</span>
             </a>
-          </div>
+          </div> -->
+
+          <owl-carousel-o [options]="techCustomOptions">
+
+            <ng-container *ngFor="let slide of technologyClientImgArr">
+     
+              <ng-template carouselSlide [id]="slide.name">
+                <div class="client-img">
+                  <img [src]="slide.url.url1" [alt]="slide.url.url1" class="img-fluid">
+                </div>
+                <div class="client-img">
+                  <img [src]="slide.url.url2" [alt]="slide.url.url2" class="img-fluid">
+                </div>
+            
+              </ng-template>
+            </ng-container>
+        
+          </owl-carousel-o>
+
         </div>
       </section>
       <!--end-->

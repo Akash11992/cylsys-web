@@ -1,3 +1,335 @@
+    <!-- Modal body start-->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-quick-contact">
+          <!-- Modal Header -->
+          <div class="modal-body p-0">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6 border-right homeform">
+                  <p>
+                    "Cylsys understands how to run a business and to sustain a
+                    long term business relation with clients."
+                  </p>
+                  <p class="pt-4">
+                    <img
+                      src="assets/images/pawasgoyal.jpg"
+                      width="60px"
+                      class="mr-3 rounded-circle float-left"
+                      alt="Pawas Goyal"
+                    />
+                    <strong>Pawas Goyal</strong><br />
+                    <span class="small"
+                      >CEO of Cylsys Software Solution Pvt Ltd</span
+                    >
+                  </p>
+
+                  <h4 class="mt-5">For Sales Enquiry</h4>
+                  <p>
+                    +91 99675 02270<br />
+                    <a href="mailto:reachus@cylsys.com">reachus@cylsys.com</a
+                    ><br />
+                    <a
+                      href="https://www.facebook.com/cylsyssoftwaresolutionpvtltd"
+                      ><i
+                        class="fab fa-facebook social mr-2"
+                        aria-label="Facebook"
+                      ></i
+                    ></a>
+                    <a href="https://www.linkedin.com/company/2310187"
+                      ><i
+                        class="fab fa-linkedin-in social mr-2"
+                        aria-label="Linkedin"
+                      ></i
+                    ></a>
+                    <!-- <a href="https://www.skype.com/pawasgoyal"><i class="fab fa-skype social mr-2"></i></a> -->
+                  </p>
+                  <div class="certificate">
+                    <img
+                      src="assets/images/fourteen_year.jpg"
+                      alt="twelve_year"
+                      width="50"
+                      class="rounded-circle"
+                    />
+                    <img
+                      src="assets/images/iso.png"
+                      alt="ten years"
+                      width="50"
+                      class="rounded-circle"
+                    />
+                    <img
+                      src="assets/images/most-innovative-companies.png"
+                      alt="The Most Innovative Companies"
+                      class="rounded-circle"
+                      width="50"
+                    />
+                    <img
+                      src="assets/images/iso9001.jpg"
+                      alt="The Most Innovative Companies"
+                      class="rounded-circle"
+                      width="50"
+                    />
+                    <img
+                      src="assets/images/iso27001.jpg"
+                      alt="The Most Innovative Companies"
+                      class="rounded-circle"
+                      width="50"
+                    />
+                    <a
+                      href="https://sur.ly/awards-generic/api/track/click/a2a7052327c614f00beec781bc3ec109"
+                    >
+                      <img
+                        src="assets/images/web safety.png"
+                        alt="web safety img"
+                        class="rounded-circle"
+                        width="50"
+                    /></a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="section-title">
+                    <div class="heading">
+                      <h2>Request a Quote</h2>
+                    </div>
+                  </div>
+                  <div class="bg-quick-contact p-0" style="box-shadow: none">
+                    <form method="post">
+                      <div class="">
+                        <input
+                          type="text"
+                          class="form-control mb-1"
+                          id="inlineFormInput"
+                          placeholder="Name"
+                          name="Name"
+                          ng-model="enquiry.Name"
+                          required
+                        />
+                      </div>
+                      <div class="">
+                        <div class="input-group mb-1">
+                          <input
+                            type="email"
+                            class="form-control text-ridus"
+                            id="inlineFormInputGroup"
+                            placeholder="Email"
+                            name="Email"
+                            ng-model="enquiry.Email"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="">
+                        <div class="input-group mb-1">
+                          <input
+                            type="Phone"
+                            class="form-control text-ridus"
+                            id="inlineFormInputGroup"
+                            placeholder="Phone"
+                            name="Phone"
+                            ng-model="enquiry.Phone"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="">
+                        <div class="input-group mb-1">
+                          <select
+                            class="form-control text-ridus"
+                            ng-model="enquiry.Service"
+                          >
+                            <option>Services</option>
+                            <option>RPA TOOLS</option>
+                            <option>Digital Marketing</option>
+                            <option>UI/UX Design</option>
+                            <option>Software Development</option>
+                            <option>Mobile Development</option>
+                            <option>Data Analytics</option>
+                            <option>Hire Developer(Staffing)</option>
+                            <option>Other</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <textarea
+                          class="form-control"
+                          rows="3"
+                          id="comment"
+                          placeholder="Requirement Brief*"
+                          ng-model="enquiry.Requirment"
+                          name="Requirement"
+                        ></textarea>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-check p-0">
+                          <label
+                            class="form-check-label small"
+                            for="invalidCheck2"
+                          >
+                            Cylsys can contact me with given information. View
+                            our
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                            &amp; <a href="terms-of-use.html"> Terms of use</a>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="submit-form">
+                        <div class="row">
+                          <div class="col-md-5">
+                            <button
+                              class="btn btn-primary w-100"
+                              type="submit "
+                              ng-click="submit(enquiry) "
+                            >
+                              Submit
+                            </button>
+                          </div>
+                          <div class="col-md-7">
+                            <a
+                              class="btn btn-success w-100"
+                              type="submit "
+                              aria-label="Chat on WhatsApp"
+                              href="https://wa.me/+919967502270"
+                            >
+                              <i
+                                class="fab fa-whatsapp social mr-2"
+                                aria-label="Whatsapp"
+                              ></i>
+                              Chat on WhatsApp
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal body end-->
+    <!-- JOIN OUR TEAM Start-->
+    <div class="modal" id="myModal1">
+      <div class="modal-dialog">
+        <div class="modal-content bg-quick-contact">
+          <!-- Modal Header -->
+          <div class="modal-header mb-1 p-0 border-0">
+            <h4 class="modal-title">JOIN OUR TEAM</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body p-0">
+            <div class="">
+              <form method="post" enctype="multipart/form-data" name="form1">
+                <div class="">
+                  <div class="input-group mb-1">
+                    <input
+                      type="text"
+                      class="form-control text-ridus"
+                      id="inlineFormInput"
+                      placeholder="Name"
+                      name="Name"
+                      ng-model="enquiry.Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <div class="input-group mb-1">
+                    <input
+                      type="email"
+                      class="form-control text-ridus"
+                      id="inlineFormInputGroup"
+                      placeholder="Email"
+                      name="Email"
+                      ng-model="enquiry.Email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <div class="input-group mb-1">
+                    <input
+                      type="Phone"
+                      class="form-control text-ridus"
+                      id="inlineFormInputGroup"
+                      placeholder="Phone"
+                      ng-model="enquiry.Phone"
+                      name="Phone"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <div class="input-group mb-1">
+                    <input
+                      type="text"
+                      class="form-control text-ridus"
+                      id="inlineFormInputGroup"
+                      placeholder="Position"
+                      name="Position"
+                      ng-model="enquiry.position"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <div class="form-group file-upload mb-1">
+                    <input
+                      type="file"
+                      class="form-control-file"
+                      id="exampleFormControlFile1"
+                      name="Filedata"
+                      ng-model="enquiry.file"
+                    />
+                  </div>
+                </div>
+                <div class="form-group mb-1">
+                  <textarea
+                    class="form-control"
+                    rows="3"
+                    id="comment"
+                    placeholder="Requirement Brief*"
+                    name="Requirement"
+                    ng-model="enquiry.Requirment"
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <div class="form-check text-center">
+                    <label class="form-check-label" for="invalidCheck2">
+                      Cylsys can contact me with given information. View our
+                      <a href="privacy-policy.html">Privacy Policy</a> &
+                      <a href="terms-of-use.html"> Terms of use </a>
+                    </label>
+                  </div>
+                </div>
+                <div class="submit-form">
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    ng-click="submit(enquiry,'Career')"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 <div class="top-bar">
     <div class="container">
       <div class="row">
@@ -24,17 +356,17 @@
         <div class="row">
           <div class="navbar-main-wrap">
             <div class="col-md-2">
-              <a href="https://www.cylsys.com/">
+              <a routerLink="/">
                 <img src="../../../../assets/images/logo.png" alt="Logo" class="logo" /></a>
             </div>
             <div class="service-menu col-md-8">
               <div class="dropdown">
-                <a href="#" class="dropbtn">Services</a>
+                <a routerLink="/" class="dropbtn">Services</a>
                 <div class="dropdown-content">
                   <div class="menu-list">
                     <ul class="m-0">
                       <li>
-                        <a href="software-development.html">
+                        <a  routerLink="/software-development">
                           <img class="img-fluid custom_img" src="../../../../assets/images/small-service-5.png"
                             alt="SOFTWARE DEVELOPMENT" />SOFTWARE DEVELOPMENT
                           <p class="small">
@@ -44,7 +376,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="mobile-app-development.html">
+                        <a routerLink="mobile-app-development">
                           <img class="img-fluid custom_img" src="../../../../assets/images/small-service-6.png"
                             alt="MOBILE DEVELOPMENT" />MOBILE APP DEVELOPMENT
                           <p class="small">
@@ -54,7 +386,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="qa-testing.html">
+                        <a routerLink="qa-testing">
                           <img class="img-fluid custom_img" src="../../../../assets/images/small-service-10.png" alt="QA & TESTING" />QA &
                           TESTING
                           <p class="small">
@@ -64,7 +396,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="hire-developer.html">
+                        <a routerLink="hire-developer">
                           <img class="img-fluid custom_img" src="../../../../assets/images/small-service-8.png"
                             alt="HIRE DEVELOPER(STAFFING)" />HIRE DEVELOPER
                           <p class="small">
@@ -76,7 +408,7 @@
                     </ul>
                     <ul class="p-0">
                       <li>
-                        <a href="digital-marketing.html">
+                        <a routerLink="digital-marketing">
                           <img class="img-fluid custom_img" src="../../../../assets/images/small-service-3.png"
                             alt="DIGITAL MARKETING" />DIGITAL MARKETING
                           <p class="small">
@@ -86,7 +418,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="ui-ux-design.html">
+                        <a routerLink="ui-ux-design">
                           <img class="img-fluid custom_img" src="../../../../assets/images/small-service-4.png" alt="UI/UX DESIGN" />UI/UX
                           DESIGN
                           <p class="small">
@@ -96,7 +428,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="software-consulting.html">
+                        <a routerLink="software-consulting">
                           <img class="img-fluid custom_img" src="../../../../assets/images/small-service-12.png"
                             alt="SOFTWARE CONSULTING" />SOFTWARE CONSULTING
                           <p class="small">
@@ -106,7 +438,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="amc.html">
+                        <a routerLink="amc-application">
                           <img class="img-fluid custom_img" src="../../../../assets/images/small-service-7.png" alt="AMC" />AMC APPLICATION
                           <p class="small">
                             Applications that streamline critical functions in the
@@ -117,7 +449,7 @@
                     </ul>
                     <ul class="p-0">
                       <!-- <li>
-                        <a href="ai-ml.html">
+                        <a routerLink="ai-ml">
                           <img
                             class="img-fluid custom_img"
                             src="../../../../assets/images/small-service-1.png"
@@ -130,7 +462,7 @@
                         </a>
                       </li> -->
                       <li>
-                        <a href="ecommerce.html">
+                        <a routerLink="ecommerce">
                           <img class="img-fluid custom_img" src="../../../../assets/images/small-service-2.png" alt="eCommerce" />E-COMMERCE
                           <p class="small">
                             Are you planning to go to the next level of Business
@@ -138,11 +470,11 @@
                           </p>
                         </a>
                       </li>
-                      <!--<li> <a href="rpa-tools.html"> <img class="img-fluid custom_img" src="../../../../assets/images/small-service-2.png" alt="RPA TOOLS"/>RPA TOOLS
+                      <!--<li> <a routerLink="rpa-tools.html"> <img class="img-fluid custom_img" src="../../../../assets/images/small-service-2.png" alt="RPA TOOLS"/>RPA TOOLS
                           <p class="small">Robotic process tools are essential for automation of the monotonous back office processes.</p>
                           </a></li>-->
                       <li>
-                        <a href="chatbots.html">
+                        <a routerLink="chatbots">
                           <img class="img-fluid custom_img" src="../../../../assets/images/small-service-11.png" alt="CHATBOTS" />CHATBOTS
                           <p class="small">
                             Chatbots are software applications that use artificial
@@ -151,7 +483,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="cloud-migration.html">
+                        <a routerLink="cloud-migration">
                           <img class="img-fluid custom_img" src="../../../../assets/images/small-service-9.png"
                             alt="CLOUD MIGRATION " />CLOUD MIGRATION
                           <p class="small">
@@ -161,7 +493,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="unicorn-ops.html">
+                        <a routerLink="unicorn-ops">
                           <img class="img-fluid custom_img" src="../../../../assets/images/unicornops_24.png" alt="Unicorn Ops " />Unicorn
                           Ops
                           <p class="small">
@@ -178,7 +510,7 @@
               <i class="fas fa-circle"></i>
   
               <div class="dropdown">
-                <a href="#" class="dropbtn">Products</a>
+                <a routerLink="#" class="dropbtn">Products</a>
                 <div class="dropdown-content dropdown-content">
                   <div class="menu-list">
                     <ul class="m-0 col-md-6">
@@ -253,12 +585,12 @@
               </div>
               <i class="fas fa-circle"></i>
               <div class="dropdown">
-                <a href="#" class="dropbtn">About us</a>
+                <a routerLink="#" class="dropbtn">About us</a>
                 <div class="dropdown-content dropdown-content2">
                   <div class="menu-list">
                     <ul class="m-0 col-md-4">
                       <li>
-                        <a href="aboutus.html">
+                        <a routerLink="aboutus">
                           <img class="img-fluid custom_img" src="../../../../assets/images/about_company_24.png" alt="Campany" />
                           COMPANY
                           <p class="small">
@@ -268,7 +600,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="life-in-cylsys.html">
+                        <a routerLink="life-in-cylsys">
                           <img class="img-fluid custom_img" src="../../../../assets/images/about_life_24.png" alt="Life in Cylsys" />
                           LIFE IN CYLSYS
                           <p class="small">
@@ -278,7 +610,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="team.html">
+                        <a routerLink="team">
                           <img class="img-fluid custom_img" src="../../../../assets/images/about_team_24.png" alt="Team" />
                           TEAM
                           <p class="small">
@@ -288,7 +620,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="events.html">
+                        <a routerLink="events">
                           <img class="img-fluid custom_img" src="../../../../assets/images/small/cylsys events.png" alt="Contact" />
                           CYLSYS'S EVENTS
                           <p class="small">
@@ -301,14 +633,14 @@
                     </ul>
                     <ul class="p-0 col-md-4">
                       <!-- <li>
-                                              <a href="testimonial.html"> <img class="img-fluid custom_img" src="assets/images/about_testimonial_24.png" alt="Testimonial" /> TESTIMONIAL
+                                              <a routerLink="testimonial"> <img class="img-fluid custom_img" src="assets/images/about_testimonial_24.png" alt="Testimonial" /> TESTIMONIAL
                                                   <p class="small">WE let our work Speak<br>
                                                       <br>
                                                   </p>
                                               </a>
                                           </li> -->
                       <li>
-                        <a href="certification.html">
+                        <a routerLink="certification">
                           <img class="img-fluid custom_img" src="../../../../assets/images/about_certification_24.png" alt="Certification" />
                           CERTIFICATION
                           <p class="small">
@@ -319,7 +651,7 @@
                       </li>
   
                       <li>
-                        <a href="clients.html">
+                        <a href="clients">
                           <img class="img-fluid custom_img" src="../../../../assets/images/about_clients_24.png" alt="Clients" />
                           CLIENTS
                           <p class="small">
@@ -329,7 +661,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="case-studies.html">
+                        <a href="case-studies">
                           <img class="img-fluid custom_img" src="../../../../assets/images/about_case_24.png" alt="Case Studies" />
                           CASE STUDIES
                           <p class="small">
