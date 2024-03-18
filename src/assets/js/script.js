@@ -42,4 +42,4 @@ var yr = d.getFullYear();
 var yearElement = document.getElementById("year");
 
 // Update the content of the element with the current year
-yearElement.textContent = yr;
+// yearElement.textContent = yr;

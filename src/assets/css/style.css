@@ -1,4 +1,6 @@
-﻿body {
+﻿
+
+body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -48,6 +50,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .touch-btn:hover a {
@@ -75,9 +78,10 @@
 }
 
 .main-head-slider {
-  position: absolute;
+  position: relative;
   top: 0;
   bottom: 0;
+  height: 417px;
 }
 
 .content-center p {
@@ -597,7 +601,7 @@ header.sticky {
   width: 100%;
   object-fit: cover;
   max-width: inherit;
-  height: 100vh;
+  height: 60vh;
   position: relative;
   z-index: -1;
 }

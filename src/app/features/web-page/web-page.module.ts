@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { WebPageRoutingModule } from './web-page-routing.module';
 import { WebPageMainComponent } from './components/web-page-main/web-page-main.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { WebPageMainComponent } from './components/web-page-main/web-page-main.c
   ],
   imports: [
     CommonModule,
-    WebPageRoutingModule
+    WebPageRoutingModule,
+    SharedModule
   ]
 })
 export class WebPageModule { }
