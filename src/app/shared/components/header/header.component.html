@@ -1,5 +1,6 @@
-    <!-- Modal body start-->
-    <div class="modal" id="myModal">
+
+
+    <div class="modal" id="myModal"  (hidden.bs.modal)="resetForm()">
       <div class="modal-dialog modal-lg">
         <div class="modal-content bg-quick-contact">
           <!-- Modal Header -->
@@ -9,6 +10,7 @@
               class="close"
               data-dismiss="modal"
               aria-label="Close"
+              (click)="closeModal()"
             >
               <span aria-hidden="true">&times;</span>
             </button>
@@ -31,7 +33,7 @@
                       >CEO of Cylsys Software Solution Pvt Ltd</span
                     >
                   </p>
-
+                
                   <h4 class="mt-5">For Sales Enquiry</h4>
                   <p>
                     +91 99675 02270<br />
@@ -101,7 +103,7 @@
                     </div>
                   </div>
                   <div class="bg-quick-contact p-0" style="box-shadow: none">
-                    <form method="post">
+                    <form method="post" [formGroup]="submitForm">
                       <div class="">
                         <input
                           type="text"
@@ -111,62 +113,113 @@
                           name="Name"
                           ng-model="enquiry.Name"
                           required
+                          maxlength="40"
+                          formControlName="name"
+                          (keypress)="keyPressAlphabet($event)"
                         />
+                        <div class="text-danger" *ngIf="(submitFormControl.name.touched )">
+                          <div class="text-danger" *ngIf="submitFormControl.name.errors?.required">
+                              Name is required
+                          </div>
+  
+                          <div class="text-danger" *ngIf="submitFormControl.name?.errors?.minlength">
+                          Name must be at least 3 characters long.
+                          </div>
+                      </div>
                       </div>
                       <div class="">
-                        <div class="input-group mb-1">
+                        <div class="">
                           <input
                             type="email"
-                            class="form-control text-ridus"
+                            class="form-control text-ridus mb-1"
                             id="inlineFormInputGroup"
                             placeholder="Email"
                             name="Email"
                             ng-model="enquiry.Email"
                             required
+                            formControlName="email"
                           />
+                          <div class="text-danger" *ngIf="(submitFormControl.email.touched )">
+                            <div class="text-danger" *ngIf="submitFormControl.email.errors?.required">
+                                Email is required
+                            </div>
+    
+                            <div class="text-danger" *ngIf="submitFormControl.email?.errors?.pattern">
+                                Please enter valid email address.
+                            </div>
+                        </div>
                         </div>
                       </div>
                       <div class="">
-                        <div class="input-group mb-1">
+                        <div class="">
                           <input
                             type="Phone"
-                            class="form-control text-ridus"
+                            class="form-control text-ridus mb-1"
                             id="inlineFormInputGroup"
                             placeholder="Phone"
                             name="Phone"
                             ng-model="enquiry.Phone"
                             required
+                            formControlName="phoneNo"
+                            maxlength="10"
+                            (keypress)="keyPressNumbers($event)"
                           />
+                          <div class="text-danger" *ngIf="(submitFormControl.phoneNo.touched )">
+                            <div class="text-danger" *ngIf="submitFormControl.phoneNo.errors?.required">
+                                Phone number is required
+                            </div>
+                        </div>
                         </div>
                       </div>
                       <div class="">
-                        <div class="input-group mb-1">
+                        <div class="">
                           <select
-                            class="form-control text-ridus"
+                            class="form-control text-ridus mb-1"
                             ng-model="enquiry.Service"
+                            formControlName="services"
+                            (change)="
+                            changeService($event)"
                           >
-                            <option>Services</option>
-                            <option>RPA TOOLS</option>
-                            <option>Digital Marketing</option>
-                            <option>UI/UX Design</option>
-                            <option>Software Development</option>
-                            <option>Mobile Development</option>
-                            <option>Data Analytics</option>
-                            <option>Hire Developer(Staffing)</option>
-                            <option>Other</option>
+                           
+                            <option value="" disabled>
+                              Select Services
+                            </option>
+                            <option *ngFor="
+                                let s of serviceList;
+                                let i = index
+                              " [value]="s.id">
+                              {{ s.serviceName}}
+                            </option>
                           </select>
+                          <div class="text-danger" *ngIf="(submitFormControl.services.touched )">
+                            <div class="text-danger" *ngIf="submitFormControl.services.errors?.required">
+                                Services is required
+                            </div>
+                        </div>
+     
                         </div>
                       </div>
                       <div class="form-group">
                         <textarea
-                          class="form-control"
+                          class="form-control mb-1"
                           rows="3"
                           id="comment"
                           placeholder="Requirement Brief*"
                           ng-model="enquiry.Requirment"
                           name="Requirement"
+                          formControlName="requirementBrief"
                         ></textarea>
+                        <div class="text-danger" *ngIf="(submitFormControl.requirementBrief.touched )">
+                          <div class="text-danger" *ngIf="submitFormControl.requirementBrief.errors?.required">
+                            Requirement is required
+                          </div>
                       </div>
+   
+                      </div>
+              
+        
+                   
+        
                       <div class="form-group">
                         <div class="form-check p-0">
                           <label
@@ -175,8 +228,8 @@
                           >
                             Cylsys can contact me with given information. View
                             our
-                            <a href="privacy-policy.html">Privacy Policy</a>
-                            &amp; <a href="terms-of-use.html"> Terms of use</a>
+                            <a routerLink="/privacy-policy">Privacy Policy</a>
+                            &amp; <a routerLink="/terms-of-use"> Terms of use</a>
                           </label>
                         </div>
                       </div>
@@ -186,7 +239,8 @@
                             <button
                               class="btn btn-primary w-100"
                               type="submit "
-                              ng-click="submit(enquiry) "
+                            
+                              [class.disabled]="submitForm.invalid " (click)="SaveRequestEndpointApi()"
                             >
                               Submit
                             </button>
@@ -196,7 +250,7 @@
                               class="btn btn-success w-100"
                               type="submit "
                               aria-label="Chat on WhatsApp"
-                              href="https://wa.me/+919967502270"
+                              href="https://wa.me/+919967502270" target="_blank" 
                             >
                               <i
                                 class="fab fa-whatsapp social mr-2"
@@ -216,120 +270,9 @@
         </div>
       </div>
     </div>
-    <!-- Modal body end-->
-    <!-- JOIN OUR TEAM Start-->
-    <div class="modal" id="myModal1">
-      <div class="modal-dialog">
-        <div class="modal-content bg-quick-contact">
-          <!-- Modal Header -->
-          <div class="modal-header mb-1 p-0 border-0">
-            <h4 class="modal-title">JOIN OUR TEAM</h4>
-            <button type="button" class="close" data-dismiss="modal">
-              &times;
-            </button>
-          </div>
-          <!-- Modal body -->
-          <div class="modal-body p-0">
-            <div class="">
-              <form method="post" enctype="multipart/form-data" name="form1">
-                <div class="">
-                  <div class="input-group mb-1">
-                    <input
-                      type="text"
-                      class="form-control text-ridus"
-                      id="inlineFormInput"
-                      placeholder="Name"
-                      name="Name"
-                      ng-model="enquiry.Name"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="">
-                  <div class="input-group mb-1">
-                    <input
-                      type="email"
-                      class="form-control text-ridus"
-                      id="inlineFormInputGroup"
-                      placeholder="Email"
-                      name="Email"
-                      ng-model="enquiry.Email"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="">
-                  <div class="input-group mb-1">
-                    <input
-                      type="Phone"
-                      class="form-control text-ridus"
-                      id="inlineFormInputGroup"
-                      placeholder="Phone"
-                      ng-model="enquiry.Phone"
-                      name="Phone"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="">
-                  <div class="input-group mb-1">
-                    <input
-                      type="text"
-                      class="form-control text-ridus"
-                      id="inlineFormInputGroup"
-                      placeholder="Position"
-                      name="Position"
-                      ng-model="enquiry.position"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="">
-                  <div class="form-group file-upload mb-1">
-                    <input
-                      type="file"
-                      class="form-control-file"
-                      id="exampleFormControlFile1"
-                      name="Filedata"
-                      ng-model="enquiry.file"
-                    />
-                  </div>
-                </div>
-                <div class="form-group mb-1">
-                  <textarea
-                    class="form-control"
-                    rows="3"
-                    id="comment"
-                    placeholder="Requirement Brief*"
-                    name="Requirement"
-                    ng-model="enquiry.Requirment"
-                    required
-                  ></textarea>
-                </div>
-                <div class="form-group">
-                  <div class="form-check text-center">
-                    <label class="form-check-label" for="invalidCheck2">
-                      Cylsys can contact me with given information. View our
-                      <a href="privacy-policy.html">Privacy Policy</a> &
-                      <a href="terms-of-use.html"> Terms of use </a>
-                    </label>
-                  </div>
-                </div>
-                <div class="submit-form">
-                  <button
-                    class="btn btn-primary"
-                    type="submit"
-                    ng-click="submit(enquiry,'Career')"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+
+
 <div class="top-bar">
     <div class="container">
       <div class="row">
@@ -651,7 +594,7 @@
                       </li>
   
                       <li>
-                        <a href="clients">
+                        <a routerLink="clients">
                           <img class="img-fluid custom_img" src="../../../../assets/images/about_clients_24.png" alt="Clients" />
                           CLIENTS
                           <p class="small">
@@ -661,7 +604,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="case-studies">
+                        <a routerLink="case-studies">
                           <img class="img-fluid custom_img" src="../../../../assets/images/about_case_24.png" alt="Case Studies" />
                           CASE STUDIES
                           <p class="small">
@@ -671,7 +614,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="contactus.html">
+                        <a routerLink="contactus">
                           <img class="img-fluid custom_img" src="../../../../assets/images/about_contact_24.png" alt="Contact" />
                           CONTACT US
                           <p class="small">
@@ -681,14 +624,14 @@
                         </a>
                       </li>
                       <!-- <li>
-                                              <a href="https://blog.cylsys.com" target="_blank"> <img class="img-fluid custom_img" src="../../../../assets/images/about_bog_24.png" alt="Blogs" /> OUR BLOGS
+                                              <a routerLink="https://blog.cylsys.com" target="_blank"> <img class="img-fluid custom_img" src="../../../../assets/images/about_bog_24.png" alt="Blogs" /> OUR BLOGS
                                                   <p class="small">Our Blogs are a Treasure trove of Knowledge garnered though our 10 + Years of Experience</p>
                                               </a>
                                           </li> -->
                     </ul>
                     <ul class="p-0 col-md-4">
                       <li>
-                        <a href="press.html">
+                        <a routerLink="press">
                           <img class="img-fluid custom_img" src="../../../../assets/images/about_press_24.png" alt="Press" />
                           PRESS
                           <p class="small">
@@ -698,7 +641,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="career.html">
+                        <a routerLink="career">
                           <img class="img-fluid custom_img" src="../../../../assets/images/about_career1_24.png" alt="Contact" />
                           CAREER
                           <p class="small">
@@ -708,7 +651,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="career-fresher.html">
+                        <a routerLink="career-fresher">
                           <img class="img-fluid custom_img" src="../../../../assets/images/about_career2_24.png" alt="Contact" />
                           CAREER FOR FRESHER
                           <p class="small">
@@ -718,7 +661,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="became_our_partner.html">
+                        <a routerLink="become_our_partner">
                           <img class="img-fluid custom_img" src="../../../../assets/images/small/cylsys events.png" alt="Contact" />
                           Became our partner
   

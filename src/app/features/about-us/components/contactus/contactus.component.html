@@ -1,0 +1,300 @@
+
+
+<div ng-app="myApp " ng-controller="Enquiry ">
+
+    <div id="fullpage ">
+    
+      <div class="container-fluid p-0">
+        <img src="assets/images/contact.jpg " alt="Contact Us " class="innerbanner wow slideInDown" />
+      </div>
+      <!--end-->
+      <!--start-->
+      <div class="container body-content inner wow slideInUp innertop">
+        <h2><span class="border-bottom border-success">Contact Us</span></h2>
+      </div>
+      <hr />
+      <div class="container body-content inner wow slideInUp">
+        <div class="row mb-5">
+          <div class="col-md-6">
+            <div class="bg-quick-contact wow fadeInRight">
+              <form  [formGroup]="contactUsForm">
+                <div class="">
+                  <input
+                    type="text"
+                    class="form-control mb-1"
+                    id="inlineFormInput"
+                    placeholder="Name"
+                    name="Name"
+                    ng-model="enquiry.Name"
+                    required
+                    formControlName="name"
+                    maxlength="40"
+                    (keypress)="keyPressAlphabet($event)"
+                  />
+                  <div class="text-danger" *ngIf="(saveFormControl.name.touched || submitted)">
+                    <div class="text-danger" *ngIf="saveFormControl.name.errors?.required">
+                        Name is required
+                    </div>
+  
+                    <div class="text-danger" *ngIf="saveFormControl.name?.errors?.minlength">
+                    Name must be at least 3 characters long.
+                    </div>
+                </div>
+                </div>
+                <div class="">
+                  <div class="">
+                    <input
+                      type="email"
+                      class="form-control text-ridus mb-1"
+                      id="inlineFormInputGroup"
+                      placeholder="Email"
+                      name="Email"
+                      ng-model="enquiry.Email"
+                      required
+                      formControlName="email"
+                    />
+                    <div class="text-danger" *ngIf="(saveFormControl.email.touched || submitted)">
+                      <div class="text-danger" *ngIf="saveFormControl.email.errors?.required">
+                          Email is required
+                      </div>
+  
+                      <div class="text-danger" *ngIf="saveFormControl.email?.errors?.pattern">
+                          Please enter valid email address.
+                      </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="">
+                    <input
+                      type="Phone"
+                      class="form-control text-ridus mb-1"
+                      id="inlineFormInputGroup"
+                      placeholder="Phone"
+                      name="Phone"
+                      ng-model="enquiry.Phone"
+                      required
+                      formControlName="phoneNo"
+                      maxlength="10"
+                      (keypress)="keyPressNumbers($event)"
+                    />
+                    <div class="text-danger" *ngIf="(saveFormControl.phoneNo.touched || submitted)">
+                      <div class="text-danger" *ngIf="saveFormControl.phoneNo.errors?.required">
+                          Phone number is required
+                      </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="">
+                    <select
+                      class="form-control text-ridus mb-1"
+                      ng-model="enquiry.Service"
+                      formControlName="services"
+                      (change)="
+                      changeService($event)"
+                    >
+                     
+                      <option value="" disabled>
+                        Select Services
+                      </option>
+                      <option *ngFor="
+                          let s of serviceList;
+                          let i = index
+                        " [value]="s.id">
+                        {{ s.serviceName}}
+                      </option>
+                    </select>
+                    <div class="text-danger" *ngIf="(saveFormControl.services.touched || submitted)">
+                      <div class="text-danger" *ngIf="saveFormControl.services.errors?.required">
+                          Services is required
+                      </div>
+                  </div>
+  
+                  </div>
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="form-control mb-1"
+                    rows="3"
+                    id="comment"
+                    placeholder="Requirement Brief*"
+                    ng-model="enquiry.Requirment"
+                    name="Requirement"
+                    formControlName="requirementBrief"
+                  ></textarea>
+                  <div class="text-danger" *ngIf="(saveFormControl.requirementBrief.touched || submitted)">
+                    <div class="text-danger" *ngIf="saveFormControl.requirementBrief.errors?.required">
+                      Requirement is required
+                    </div>
+                </div>
+  
+                </div>
+                <div class="form-group">
+                  <div class="form-check p-0">
+                    <label
+                      class="form-check-label small"
+                      for="invalidCheck2"
+                    >
+                      Cylsys can contact me with given information. View
+                      our
+                      <a routerLink="/privacy-policy">Privacy Policy</a>
+                      &amp; <a routerLink="/terms-of-use"> Terms of use</a>
+                    </label>
+                  </div>
+                </div>
+        
+  
+  
+                <div class="submit-form">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <button
+                        class="btn btn-primary w-100"
+                        type="submit "
+                      
+                        [disabled]="contactUsForm.invalid" (click)="SaveRequestEndpointApi()"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                    <div class="col-md-7">
+                      <a
+                        class="btn btn-success w-100"
+                        type="submit "
+                        aria-label="Chat on WhatsApp"
+                        href="https://wa.me/+919967502270" target="_blank" 
+                      >
+                        <i
+                          class="fab fa-whatsapp social mr-2"
+                          aria-label="Whatsapp"
+                        ></i>
+                        Chat on WhatsApp
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+  
+          <div class="col-md-6 ">
+            <p>
+              "Cylsys understood how to run a business and to sustain a long
+              term business relation with clients. "
+            </p>
+            <p class="pt-4">
+              <img src="assets/images/pawasgoyal.jpg " width="60px " class="mr-3 rounded-circle float-left" alt="Pawas Goyal " />
+              <strong>Pawas Goyal</strong><br />
+              <span class="small">CEO of Cylsys Software Solution Pvt Ltd</span>
+            </p>
+  
+            <h4 class="pt-md-0 mt-5">CONNECT WITH US</h4>
+            <div class="section-detail">
+              <div class="company-sort-des">
+                <div class="company-add">
+                  <div class="company-add-icon">
+                    <i class="fab fa-whatsapp social mr-2" aria-label="Whatsapp"></i>
+                  </div>
+                  <div class="company-add-detail">
+                    <div class="company-add-title">
+                      <h5></h5>
+                    </div>
+                    <div class="company-add-contain">
+                      <h5>
+                        <a target="_blank " aria-label="Chat on WhatsApp" href="https://wa.me/+919967502270">
+                          +91 9967502270
+                          <span class="text-dark">(Cylsys Whats App Sales Bot)</span>
+                        </a>
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="company-add">
+                  <div class="company-add-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="company-add-detail">
+                    <div class="company-add-contain">
+                      <h5>
+                        <a href="mailto:reachus@cylsys.com">reachus@cylsys.com
+                          <span class="text-dark">(For Any Enquiries)</span></a>
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="company-add">
+                  <div class="company-add-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="company-add-detail">
+                    <div class="company-add-contain">
+                      <h5>
+                        <a href="mailto:reachus@cylsys.com">sales@cylsys.com
+                          <span class="text-dark">(For Sales Enquiries)</span></a>
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="social-media">
+                  <a href="https://www.facebook.com/cylsyssoftwaresolutionpvtltd" target="_blank"><i
+                      class="fab fa-facebook social mr-2" aria-label="Facebook"></i></a>
+                  <a href="https://www.linkedin.com/company/2310187" target="_blank"><i
+                      class="fab fa-linkedin-in social mr-2" aria-label="Linkedin"></i></a>
+                </div>
+                <div class="certificate">
+                  <img src="assets/images/fourteen_year.jpg" alt="twelve_year" class="rounded-circle" width="50">
+                  <img src="assets/images/iso.png" alt="ten years" class="rounded-circle" width="50">
+                  <img src="assets/images/most-innovative-companies.png" alt="The Most Innovative Companies"
+                    class="rounded-circle" width="50">
+                  <img src="assets/images/iso9001.jpg" alt="The Most Innovative Companies" class="rounded-circle" width="50">
+                  <img src="assets/images/iso27001.jpg" alt="The Most Innovative Companies" class="rounded-circle" width="50">
+                  <a href="https://sur.ly/awards-generic/api/track/click/a2a7052327c614f00beec781bc3ec109">
+                    <img src="assets/images/web safety.png" alt="web safety img" class="rounded-circle" width="50"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="container inner ">
+        <h2 class="pt-0">Our Location</h2>
+        <div class="row mb-5 inner_new">
+          <div class="col-md-3 border">
+            <h2 class="pt-0">India</h2>
+            <p>
+              <!-- Unit No. 5, Second Floor, Harmony Mall, Goregaon West, Mumbai
+                400104 -->
+              E301, Sky Park, Ajit Glass Lane, Near HDFC Corp House, Goregaon
+              West, Mumbai, Maharashtra 400104
+            </p>
+          </div>
+          <div class="col-md-3 border">
+            <h2 class="pt-0">Dubai</h2>
+            <p>P.O.Box: 1815, Churchill Tower, Business Bay, Dubai</p>
+          </div>
+          <div class="col-md-3 border">
+            <h2 class="pt-0">Singapore</h2>
+            <p>30 Prinsep Street Singapore 188647</p>
+          </div>
+          <div class="col-md-3 border">
+            <h2 class="pt-0">USA</h2>
+            <p>26 pleasant plains road Franklin Park, NJ, 08823</p>
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
+      <!--end-->
+      
+     
+    </div>
+   
+    
+   
+   
+  
+  </div>

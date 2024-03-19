@@ -1360,7 +1360,7 @@ body {
     width: 100%;
     padding: 100px 0;
     text-align: center;
-    background-image: url(../images/testomonial-bg.png);
+    background-image: url(assets/images/testomonial-bg.png);
     background-position: center;
     height: 150% !important;
   }
@@ -1391,12 +1391,12 @@ body {
   }
   
   .testimonialhome {
-    background-image: url(../images/testomonial-bg.png);
+    background-image: url(assets/images/testomonial-bg.png);
     background-size: cover;
   }
   
   .testimonial {
-    background-image: url(../images/testomonial-bg.png);
+    background-image: url(assets/images/testomonial-bg.png);
     background-position: top center;
     /*width: 100%;
       height: calc(100vh - 75px);*/
@@ -1446,7 +1446,7 @@ body {
   .job_rec {
     width: 100%;
     height: auto;
-    background-image: url(../images/bg-1.jpg);
+    background-image: url(assets/images/bg-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1542,7 +1542,7 @@ body {
   
   .newsletter {
     padding: 17px 0;
-    /*background-image: url(../images/testomonial-bg.png);*/
+    /*background-image: url(assets/images/testomonial-bg.png);*/
     background-position: top center;
     height: auto;
     width: 100%;
@@ -1903,7 +1903,7 @@ body {
   
   .footer-bg {
     padding: 50px 0 30px 0;
-    /*background-image: url(../images/footer.png);*/
+    /*background-image: url(assets/images/footer.png);*/
     background-size: cover;
     background-color: #011045;
     position: relative;
@@ -2064,11 +2064,11 @@ body {
     background-color: #de7300;
   }
   
-  .innerbg {
-    background-image: url(../images/inner_bg.jpg);
+  /* .innerbg {
+    background-image: url(assets/images/inner_bg.jpg);
     background-size: cover;
   }
-  
+   */
   .innerbanner {
     width: 100%;
     background-size: cover;
@@ -2182,7 +2182,7 @@ body {
   }
   
   .hire {
-    background-image: url(../images/hire.png);
+    background-image: url(assets/images/hire.png);
     background-size: cover;
   }
   
@@ -2341,7 +2341,7 @@ body {
     height: 100%;
   }
   .mobilepage {
-    background-image: url(../images/mobiledevelopment1.jpg);
+    background-image: url(assets/images/mobiledevelopment1.jpg);
     background-size: cover;
   }
   
@@ -2604,7 +2604,7 @@ body {
   /*testomonial page start here*/
   
   .tetimonialbgn {
-    background: url(../images/testomonial-bg.png);
+    background: url(assets/images/testomonial-bg.png);
     background-size: cover;
     padding: 30px 0;
   }
@@ -4207,14 +4207,14 @@ body {
     margin-left: 10px;
   }
   
-  .smallhexagon {
+  /* .smallhexagon {
     width: 40px;
     height: 46px;
     background: #b69e40;
     position: relative;
-    background: url(../images/templatemo_teamhexa.png) no-repeat;
+    background: url(assets/images/templatemo_teamhexa.png) no-repeat;
     margin-bottom: 10px;
-  }
+  } */
   
   /*------------------------------------------------------
       Gallery Styles 

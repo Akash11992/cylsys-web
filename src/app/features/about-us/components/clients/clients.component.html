@@ -1,0 +1,54 @@
+
+ 
+
+  <div ng-app="myApp" ng-controller="Enquiry">
+   
+    <div id="fullpage">
+    
+      <div class="container-fluid p-0">
+        <img
+          src="assets/images/clients.jpg"
+          alt="Clients"
+          class="innerbanner wow slideInDown"
+        />
+      </div>
+      <!--end-->
+      <!--start-->
+      <div class="container body-content inner wow slideInUp innertop">
+        <h2><span class="border-bottom border-success">Clients</span></h2>
+        <h3 class="mb-4">
+          We have worked with the following clients on different modules based
+          on the requirements.
+        </h3>
+      </div>
+      <hr />
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-4" *ngFor="let clientUrl of this.clientImgArr">
+            <img
+              src="{{clientUrl.url}}"
+              alt="{{clientUrl.url}}"
+              class="border mb-2 img-fluid"
+            />
+          </div>
+                    <h4 class="mt-3 col-md-12">
+            I do hope that this information will help you gain a clear idea of
+            what we can offer, and that we can become a recognized vendor for
+            your organization.
+          </h4>
+        </div>
+        <br />
+        <br />
+
+        <br />
+      </div>
+
+      <!--end-->
+      <hr />
+    
+    </div>
+ 
+
+   
+ 
+</div>
