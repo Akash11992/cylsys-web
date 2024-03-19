@@ -16,7 +16,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     dots: true,
 
     navSpeed: 700,
-    navText: [ '<i class="fa-chevron-left"></i>','<i class="fa-chevron-right></i>"'],
+    navText: [ '<i  aria-hidden="true" class="carousel-control-prev-icon"></i>  <span  class="sr-only">Previous</span>',
+                '<i  aria-hidden="true" class="carousel-control-next-icon"></i> <span  class="sr-only">Next</span>'],
     responsive: {
       0: {
         items: 1
@@ -34,10 +35,39 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     nav: false,
  
   }
+  
+  techCustomOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: false,
+    pullDrag: false,
+    dots: true,
+
+    navSpeed: 700,
+    navText: [ '<i  aria-hidden="true" class="carousel-control-prev-icon"></i>  <span  class="sr-only">Previous</span>',
+                '<i  aria-hidden="true" class="carousel-control-next-icon"></i> <span  class="sr-only">Next</span>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true,
+ 
+  }
 
 
 
   clientImgArr: any = [];
+ technologyClientImgArr: any = [];
   @ViewChild('clientList1') clientList1!: ElementRef;
   constructor() {
     this.clientImgArr = [
@@ -183,6 +213,108 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   //  "assets/images/clients/cylsys%20client-White-Lotus-Logo.png"
     ];
 
+    this.technologyClientImgArr = [
+      { name: "slide-1", url: 
+      { 
+        url1:  "assets/images/tech/ui1.jpg",
+        url2: "assets/images/tech/ui2.jpg"
+
+      } },
+      { name: "slide-2", url: 
+      { 
+        url1: "assets/images/tech/ui3.jpg",
+        url2:  "assets/images/tech/ui4.jpg"
+      } },
+      { name: "slide-3", url: 
+      { 
+        url1:  "assets/images/tech/ui5.jpg", 
+        url2: "assets/images/tech/ui6.png"
+      } },
+      { name: "slide-4", url: 
+      { 
+        url1: "assets/images/tech/ui7.jpg",
+        url2: "assets/images/tech/wf2.jpg"
+      } },
+      { name: "slide-5", url: 
+      { 
+        url1: "assets/images/tech/wf1.jpg", 
+        url2: "assets/images/tech/wf3.jpg",
+      } },
+      { name: "slide-6", url: 
+      { 
+        url1: "assets/images/tech/wf4.jpg",
+        url2:"assets/images/tech/wf5.jpg"
+      } },
+      { name: "slide-7", url: 
+      { 
+        url1: "assets/images/tech/wf6.jpg",
+        url2: "assets/images/tech/wf7.jpg"
+      } }, 
+      { name: "slide-8", url: 
+      { 
+        url1: "assets/images/tech/wf8.jpg",
+        url2:"assets/images/tech/php.png",
+      } }, 
+      { name: "slide-9", url: 
+      { 
+        url1: "assets/images/tech/doi1.jpg",
+        url2:"assets/images/tech/doi2.jpg",
+      } }, 
+      { name: "slide-10", url: 
+      { 
+        url1:"assets/images/tech/doi3.jpg",
+        url2:"assets/images/tech/doi4.jpg",
+      } }, 
+      { name: "slide-11", url: 
+      { 
+        url1: "assets/images/tech/doi5.jpg",
+        url2:"assets/images/tech/doi6.jpg",
+      } }, 
+      { name: "slide-12", url: 
+      { 
+        url1: "assets/images/tech/doi7.jpg",
+        url2:"assets/images/tech/doi8.jpg",
+      } },
+
+
+
+// "assets/images/tech/doi9.jpg",
+// "assets/images/tech/doi10.jpg",
+
+// "assets/images/tech/doi11.jpg",
+// "assets/images/tech/doi12.jpg",
+
+// "assets/images/tech/dml1.jpg",
+// "assets/images/tech/dml2.jpg",
+
+// "assets/images/tech/dml3.jpg",
+// "assets/images/tech/dml4.jpg",
+
+// "assets/images/tech/dml5.jpg",
+// "assets/images/tech/dml6.jpg",
+
+// "assets/images/tech/dml8.jpg",
+// "assets/images/tech/dml9.jpg",
+
+// "assets/images/tech/dml10.jpg",
+// "assets/images/tech/dml11.jpg",
+
+// "assets/images/tech/dml12.jpg",
+// "assets/images/tech/dml13.jpg",
+
+// "assets/images/tech/cvb1.png",
+// "assets/images/tech/cvb2.jpg",
+
+// "assets/images/tech/cvb3.jpg",
+// "assets/images/tech/cvb4.jpg",
+
+// "assets/images/tech/cvb5.jpg",
+// "assets/images/tech/cvb6.png",
+
+// "assets/images/tech/cvb7.jpg",
+// "assets/images/tech/cvb8.jpg"
+  
+    ]
   }
 
   ngOnInit(): void {
@@ -193,7 +325,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     let imageUrls: string[] = [];
 
     // Select all images within the clientList1 element
-    const clientImages = this.clientList1.nativeElement.querySelectorAll('.client-img img');
+    const clientImages = this.clientList1.nativeElement.querySelectorAll('.carousel-item img');
 
     // Loop through each image and push its source URL into the imageUrls array
     clientImages.forEach((img: HTMLImageElement) => {

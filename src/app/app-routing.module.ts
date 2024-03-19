@@ -15,6 +15,21 @@ const routes: Routes = [
   {
     path:'',
     loadChildren:()=>
+    import('./features/services/services.module').then((m)=> m.ServicesModule)
+  },
+  {
+    path:'',
+    loadChildren:()=>
+    import('./features/products/products.module').then((m)=> m.ProductsModule)
+  },
+  {
+    path:'',
+    loadChildren:()=>
+    import('./features/about-us/about-us.module').then((m)=> m.AboutUsModule)
+  },
+  {
+    path:'',
+    loadChildren:()=>
     import('./shared/shared.module').then((m)=> m.SharedModule)
   },
   { path:'**',redirectTo:'/',pathMatch:'full'}
