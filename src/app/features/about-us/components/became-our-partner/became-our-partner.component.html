@@ -1,0 +1,160 @@
+
+<div ng-app="myApp" ng-controller="Enquiry">
+ 
+    <div id="fullpage">
+    
+      <div class="container-fluid p-0">
+        <img src="assets/images/termofuse.jpg" alt="Terms of Use" class="innerbanner wow slideInDown" />
+      </div>
+      <!--end-->
+      <!--start-->
+      <div class="container body-content inner wow slideInUp innertop">
+        <h2><span class="border-bottom border-success">Become our partner</span></h2>
+        <h3>Scale your business with Cylsys and become a Reseller Partner. A great opportunity for Creative Agencies,
+          Software & IT Companies and Channel Sales Partners.</h3>
+      </div>
+      <hr />
+      <div class="container body-content inner wow slideInUp">
+        <section class="contact-form">
+  
+          <h2 class="text-color-blue text-center">Get in touch with us</h2>
+          <form   id="_form_1_"  [formGroup]="PartnerForm"
+  
+           >
+  
+            <div class="_form-content">
+              <div class="_form_element _x89210987 _full_width ">
+                <label for="firstname" class="_form-label">
+                </label>
+                <div class="_field-wrapper">
+                  <input type="text" id="firstname"     (keypress)="keyPressAlphabet($event)"
+                  formControlName="first_name"
+                  name="firstname" maxlength="40" placeholder="First name" required=""
+                    data-name="firstname">
+                    <div class="text-danger" *ngIf="(saveFormControl.first_name.touched || submitted)">
+                      <div class="text-danger" *ngIf="saveFormControl.first_name.errors?.required">
+                        First Name is required!
+                      </div>
+    
+                      <div class="text-danger" *ngIf="saveFormControl.first_name?.errors?.minlength">
+                     First Name must be at least 3 characters long.
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="_form_element _x69771420 _full_width ">
+                <label for="lastname" class="_form-label">
+                </label>
+                <div class="_field-wrapper">
+                  <input type="text" id="lastname" name="lastname"  formControlName="last_name"
+                  maxlength="40" placeholder="Last name"  
+                  (keypress)="keyPressAlphabet($event)"
+                
+                    data-name="lastname">
+                    <div class="text-danger" *ngIf="(saveFormControl.last_name.touched || submitted)">
+                      <div class="text-danger" *ngIf="saveFormControl.last_name.errors?.required">
+                         Last Name is required!
+                      </div>
+    
+                      <div class="text-danger" *ngIf="saveFormControl.last_name?.errors?.minlength">
+                    Last Name must be at least 3 characters long.
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="_form_element _x51564272 _full_width ">
+                <label for="email" class="_form-label">
+                </label>
+                <div class="_field-wrapper">
+                  <input type="text" id="email"                     formControlName="email"
+                  name="email" placeholder="E-mail" required="" data-name="email">
+                  <div class="text-danger" *ngIf="(saveFormControl.email.touched || submitted)">
+                    <div class="text-danger" *ngIf="saveFormControl.email.errors?.required">
+                        Email is required!
+                    </div>
+  
+                    <div class="text-danger" *ngIf="saveFormControl.email?.errors?.pattern">
+                        Please enter valid email address!
+                    </div>
+                </div>
+  
+                </div>
+              </div>
+              <div class="_form_element _field2 _full_width ">
+                <label for="field[2]" class="_form-label">
+                </label>
+                <div class="_field-wrapper">
+                  <input type="text" id="field[2]"                 (keypress)="keyPressAlphabet($event)"
+                  maxlength="50" placeholder="Organization name"  formControlName="organization_name"
+  
+                    data-name="organization_name">
+                    <div class="text-danger" *ngIf="(saveFormControl.organization_name.touched || submitted)">
+                      <div class="text-danger" *ngIf="saveFormControl.organization_name.errors?.required">
+                        Organization Name is required!
+                      </div>
+                  </div>
+    
+                </div>
+              </div>
+              <div class="_form_element _field3 _full_width ">
+                <label for="field[3]" class="_form-label">
+                </label>
+                <div class="_field-wrapper">
+                
+                  <select class="custom-select custom-select-lg mb-3" id="field[3]"  formControlName="organization_type"
+                  (change)="
+                  changeIndustry($event)">
+                  <option value="" disabled>
+                    Select Industry
+                  </option>
+                  <option *ngFor="
+                      let s of industrydata;
+                      let i = index
+                    " [value]="s.id">
+                    {{ s.organization_type}}
+                  </option>
+                  </select>
+                  <div class="text-danger" *ngIf="(saveFormControl.organization_type.touched || submitted)">
+                    <div class="text-danger" *ngIf="saveFormControl.organization_type.errors?.required">
+                      Industry is required!
+                    </div>
+                </div>
+  
+                </div>
+              </div>
+              <div class="_form_element _field4 _full_width ">
+                <label for="field[4]" class="_form-label">
+                </label>
+                <div class="_field-wrapper">
+                  <textarea id="field[4]" name="field[4]" placeholder="Expectations (optional)"
+                    data-name="expectations" formControlName="expexctations"></textarea>
+                </div>
+              </div>
+  
+  
+                      
+              <div class="_button-wrapper _full_width">
+                <button  type="submit"  class="btn _submit"
+                   [class.disabled]="PartnerForm.invalid" (click)="SaveRequestEndpointApi()">
+                  Submit
+                </button>
+              </div>
+              <div class="_clear-element">
+              </div>
+            </div>
+  
+          </form>
+  
+  
+  
+        </section>
+      </div>
+  
+      <!--end-->
+      <hr />
+   
+    </div>
+   
+  
+  
+  </div>

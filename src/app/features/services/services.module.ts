@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { ServicesRoutingModule } from './services-routing.module';
 import { SoftwareDevelopmentComponent } from './components/software-development/software-development.component';
@@ -37,7 +38,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     ServicesRoutingModule,
-    SharedModule
+    SharedModule,
+    CarouselModule,
+
   ]
 })
 export class ServicesModule { }

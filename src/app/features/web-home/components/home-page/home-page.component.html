@@ -369,7 +369,7 @@
           <div class="row text-center">
             <div class="col-sm-2 col-4 mb-2">
               <a
-                href="software-development.html"
+                routerLink="software-development"
                 class="text-dark small"
                 title="Software Development"
               >
@@ -385,7 +385,7 @@
             </div>
             <div class="col-sm-2 col-4 mb-2">
               <a
-                href="mobile-app-development.html"
+                href="mobile-app-development"
                 class="text-dark small"
                 title="Mobile Development"
               >
@@ -400,7 +400,7 @@
               </a>
             </div>
             <div class="col-sm-2 col-4 mb-2">
-              <a href="qa-testing.html" class="text-dark" title="QA & Testing">
+              <a routerLink="qa-testing" class="text-dark" title="QA & Testing">
                 <div class="card">
                   <img
                     src="assets/images/services/3.jpg"
@@ -413,7 +413,7 @@
             </div>
             <div class="col-sm-2 col-4 mb-2">
               <a
-                href="hire-developer.html"
+                routerLink="hire-developer"
                 class="text-dark"
                 title="Hire Developer"
               >
@@ -429,7 +429,7 @@
             </div>
             <div class="col-sm-2 col-4 mb-2">
               <a
-                href="digital-marketing.html"
+                routerLink="digital-marketing"
                 class="text-dark"
                 title="Digital Marketing"
               >
@@ -445,7 +445,7 @@
             </div>
             <div class="col-sm-2 col-4 mb-2">
               <a
-                href="ui-ux-design.html"
+                routerLink="ui-ux-design"
                 class="text-dark"
                 title="UI / UX Design"
               >
@@ -461,7 +461,7 @@
             </div>
             <div class="col-sm-2 col-4 mb-2">
               <a
-                href="software-consulting.html"
+                routerLink="software-consulting"
                 class="text-dark"
                 title="Software Consulting"
               >
@@ -476,7 +476,7 @@
               </a>
             </div>
             <div class="col-sm-2 col-4 mb-2">
-              <a href="amc.html" class="text-dark" title="AMC Solution">
+              <a routerLink="amc-application" class="text-dark" title="AMC Solution">
                 <div class="card">
                   <img
                     src="assets/images/services/13.jpg"
@@ -489,7 +489,7 @@
             </div>
 
             <div class="col-sm-2 col-4 mb-2 text-center">
-              <a href="ai-ml.html" class="text-dark" title="AI ML">
+              <a routerLink="ai-ml" class="text-dark" title="AI ML">
                 <div class="card">
                   <img
                     src="assets/images/services/9.jpg"
@@ -501,7 +501,7 @@
               </a>
             </div>
             <div class="col-sm-2 col-4 mb-2">
-              <a href="ecommerce.html" class="text-dark" title="RPA Tools">
+              <a routerLink="ecommerce" class="text-dark" title="RPA Tools">
                 <div class="card">
                   <img
                     src="assets/images/services/14.jpg"
@@ -514,13 +514,13 @@
             </div>
 
             <!-- <div class="col-sm-2 col-4 mb-2">
-          <a href="rpa-tools.html" class="text-dark" title="RPA Tools">
+          <a routerLink="rpa-tools" class="text-dark" title="RPA Tools">
           <div class="card"> <img src="assets/images/services/10.jpg" class="card-img-top" alt="Service">
             <div class="card-body">RPA Tools </div>
           </div></a>
         </div> -->
             <div class="col-sm-2 col-4 mb-2">
-              <a href="chatbots.html" class="text-dark" title="Chatbots">
+              <a routerLink="chatbots" class="text-dark" title="Chatbots">
                 <div class="card">
                   <img
                     src="assets/images/services/11.jpg"
@@ -533,7 +533,7 @@
             </div>
             <div class="col-sm-2 col-4 mb-2">
               <a
-                href="cloud-migration.html"
+                routerLink="cloud-migration"
                 class="text-dark"
                 title="Cloud Migration"
               >
@@ -607,17 +607,21 @@
             <ng-container *ngFor="let slide of clientImgArr">
               <ng-template carouselSlide [id]="slide.name">
                 <div class="client-img">
-                  <img [src]="slide.url.url1" [alt]="slide.url.url1" class="img-fluid">
+                  <img [src]="slide.url.url1" [alt]="slide.url.url1" class="img-fluid" style="   width: 100%;
+    height: 130px;" >
                 </div>
                 <div class="client-img">
-                  <img [src]="slide.url.url2" [alt]="slide.url.url2" class="img-fluid">
+                  <img [src]="slide.url.url2" [alt]="slide.url.url2" class="img-fluid" style="   width: 100%;
+    height: 130px;">
                 </div>
                 <div class="client-img">
-                  <img [src]="slide.url.url3" [alt]="slide.url.url3" class="img-fluid">
+                  <img [src]="slide.url.url3" [alt]="slide.url.url3" class="img-fluid" style="   width: 100%;
+    height: 130px;">
                 </div>
                 <div class="client-img">
                   
-                  <img [src]="slide.url.url4" [alt]="slide.url.url4" class="img-fluid">
+                  <img [src]="slide.url.url4" [alt]="slide.url.url4" class="img-fluid" style="   width: 100%;
+    height: 130px;">
                 </div>
               </ng-template>
             </ng-container>
@@ -1783,3 +1787,4 @@
        -->
       <!--end-->
     </div>
+    

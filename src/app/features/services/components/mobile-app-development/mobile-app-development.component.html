@@ -323,7 +323,7 @@
           <div class="container inner wow slideInUp">
             <h2 class="mb-3 mt-5 text-center">Our Clients</h2>
             <div class="row">
-              <ul id="rcbrand2">
+              <!-- <ul id="rcbrand2">
                 <li>
                   <img
                     src="assets/images//clients/cylsys client-Uti mutual fund.jpg"
@@ -366,7 +366,6 @@
                     class="img-fluid"
                   />
                 </li>
-                <!--<li><img src="assets/images//clients/client20.jpg" alt="Client" class="img-fluid"></li>-->
                 <li>
                   <img
                     src="assets/images//clients/cylsys client-Kandahar Knights.jpg"
@@ -614,7 +613,24 @@
                     class="img-fluid"
                   />
                 </li>
-              </ul>
+              </ul> -->
+
+
+
+
+              <owl-carousel-o [options]="customOptions">
+
+                <ng-container *ngFor="let slide of clientImgArr">
+         
+                  <ng-template carouselSlide >
+                    <div class="client-img">
+                      <img [src]="slide.url" [alt]="slide.url" class="img-fluid">
+                    </div>              
+                  </ng-template>
+                </ng-container>
+            
+              </owl-carousel-o>
+
             </div>
           </div>
           <section class="section testmonial1">

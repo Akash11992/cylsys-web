@@ -1,0 +1,403 @@
+
+
+<div ng-app="myApp" ng-controller="Enquiry">
+  
+    <!-- Modal 2 start-->
+    <div class="modal" id="myModal1">
+      <div class="modal-dialog">
+        <div class="modal-content bg-quick-contact">
+          <!-- Modal Header -->
+          <div class="modal-body p-0">
+            <!--<div class="quick-content-box">-->
+            <div class="section-title">
+              <div class="heading">
+                <h2>Case Study</h2>
+              </div>
+            </div>
+            <div class="bg-quick-contact p-0" style="box-shadow: none">
+              <form method="post">
+                <div class="">
+                  <input
+                    type="text"
+                    class="form-control mb-1"
+                    id="inlineFormInput"
+                    placeholder="Name"
+                    name="Name"
+                    ng-model="enquiry.Name"
+                    required
+                  />
+                </div>
+                <div class="">
+                  <div class="input-group mb-1">
+                    <input
+                      type="Phone"
+                      class="form-control text-ridus"
+                      id="inlineFormInputGroup"
+                      placeholder="Phone"
+                      name="Phone"
+                      ng-model="enquiry.Phone"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <div class="input-group mb-1">
+                    <input
+                      type="email"
+                      class="form-control text-ridus"
+                      id="inlineFormInputGroup"
+                      placeholder="Email"
+                      name="Email"
+                      ng-model="enquiry.Email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <div class="input-group mb-1">
+                    <input
+                      type="text"
+                      class="form-control text-ridus"
+                      id="inlineFormInputGroup"
+                      placeholder="Location"
+                      name="Location"
+                      ng-model="enquiry.Location"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    rows="3"
+                    id="comment"
+                    placeholder="Remark"
+                    ng-model="enquiry.Remark"
+                    name="Remark"
+                  ></textarea>
+                </div>
+                <div class="submit-form">
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    ng-click="submit(enquiry)"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 2 end-->
+    <div id="fullpage">
+     
+      <div class="container-fluid p-0">
+        <img
+          src="assets/images/casestudy.jpg"
+          alt="Case Studies"
+          class="innerbanner wow slideInDown"
+        />
+      </div>
+      <!--end-->
+      <!--start-->
+      <div class="container body-content inner wow slideInUp innertop">
+        <h2><span class="border-bottom border-success">Case Studies</span></h2>
+        <h3>See how we've helped transform businesses</h3>
+      </div>
+
+      <div class="container body-content inner wow slideInUp mb-5">
+        <div class="card-deck mt-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                Case Study - Worlds Top Ecommerce Company
+              </h5>
+              <p class="card-text">
+                The brief from the client was they required 25 Desktop Support
+                Engineers having skill sets of excellent knowledge...
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!-- <a href="case-study/Case-Study-for-Worlds-Top-Ecommerce-Company.pdf" download="case-study/Case-Study-for-Worlds-Top-Ecommerce-Company.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Case Study - Online Loan Aggregator</h5>
+              <p class="card-text">
+                As the DSA model was a Feet on street model, the client had to
+                recruit a large workforce of Tele callers, Sales Executives...
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!--<a href="case-study/Case-Study-Online-Loan-Aggregator.pdf" download="case-study/Case-Study-Online-Loan-Aggregator.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                Case Study - Digital Transaction System
+              </h5>
+              <p class="card-text">
+                Mutual fund companies handle several heavy transactions in a day
+                The whole business depends upon these transactions...
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!--<a href="case-study/Case-Study-for-Digital-Transaction-System.pdf" download="case-study/Case-Study-for-Digital-Transaction-System.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+        </div>
+        <div class="card-deck mt-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Case Study - Kotak 811</h5>
+              <p class="card-text">
+                Kotak Mahindra Bank is one of the leading private Banks in India
+                and offers banking products and financial services for Corporate
+                and Retail...
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!-- <a href="case-study/Case Study_Kotak_811.pdf" download="case-study/Case-Study-Kotak-811.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Case Study - Paytm</h5>
+              <p class="card-text">
+                Paytm is an Indian e-commerce payment system and Financial
+                Technology company based in Noida, Uttar Pradesh....
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!--<a href="case-study/Case Study_Paytm_EKyc.pdf" download="case-study/Case Study_Paytm_EKyc.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                Case Study - Application Integration Software
+              </h5>
+              <p class="card-text">
+                Case Study for leading provider of solutions that boost
+                efficiency, improve safety, raise environmental....
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!--<a href="case-study/Case Study_Paytm_EKyc.pdf" download="case-study/Case Study_Paytm_EKyc.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+        </div>
+        <div class="card-deck mt-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                Case Study - ERP for Steel Ball Manufactures
+              </h5>
+              <p class="card-text">
+                Cylsys Software delivered exceptional results in this project
+                thought it was its first in the manufacturing industry....
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!--<a href="case-study/Case Study_Paytm_EKyc.pdf" download="case-study/Case Study_Paytm_EKyc.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Case Study - HDFC Ltd Home Loan</h5>
+              <p class="card-text">
+                HDFC Ltd. is a leading financial services company based in
+                Mumbai, India. It is a major and one of the first housing
+                finance provider in India....
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!--<a href="case-study/Case Study_Paytm_EKyc.pdf" download="case-study/Case Study_Paytm_EKyc.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Case Study - GoKhana</h5>
+              <p class="card-text">
+                GoKhana is the Technology based Application created by ToBox
+                Ventures Pvt. Ltd. which provides convenience and increases
+                efficiency in Corporate food courts, malls.....
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!--<a href="case-study/Case Study_Paytm_EKyc.pdf" download="case-study/Case Study_Paytm_EKyc.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+        </div>
+        <div class="card-deck mt-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Case Study - Kandahar Knights</h5>
+              <p class="card-text">
+                Kandahar Knights are a franchise cricket team which participates
+                in the Afghanistan Premier League (APL) which is an annual 20
+                -20 Cricket tournaments held in the United Arab Emirates....
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!--<a href="case-study/Case Study_Paytm_EKyc.pdf" download="case-study/Case Study_Paytm_EKyc.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                Case Study – Tata Capital- KYC Fulfilment
+              </h5>
+              <p class="card-text">
+                Tata Capital Ltd. Is a financial and investment service provider
+                in India. The company is based in Mumbai and has more than 100
+                branches across the country....
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!--<a href="case-study/Case Study_Paytm_EKyc.pdf" download="case-study/Case Study_Paytm_EKyc.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Case Study – Data Polling Application</h5>
+              <p class="card-text">
+                One of the leading Mutual fund Investment companies in India. It
+                is the one of the largest Asset management company in India....
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!--<a href="case-study/Case Study_Paytm_EKyc.pdf" download="case-study/Case Study_Paytm_EKyc.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+        </div>
+        <div class="card-deck mt-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Case Study – Wolters Kluwer</h5>
+              <p class="card-text">
+                Wolters Kluwer is a Global provider of professional information,
+                software solutions and services for clinicians, nurses,
+                accountants, lawyers, tax specialists etc....
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!--<a href="case-study/Case Study_Paytm_EKyc.pdf" download="case-study/Case Study_Paytm_EKyc.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Case Study – Medical Reimbursement</h5>
+              <p class="card-text">
+                One of the leading Mutual fund Investment companies in India. It
+                is the one of the largest Asset management company in India.....
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!--<a href="case-study/Case Study_Paytm_EKyc.pdf" download="case-study/Case Study_Paytm_EKyc.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Case Study – Wingreens Farms</h5>
+              <p class="card-text">
+                Wingreen Farms is one of the leading Brands in the FMCG
+                industry. Their Extensive product range includes Dips & Spreads,
+                Sauces & Mayos, Herbs.....
+              </p>
+              <button
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#myModal1"
+              >
+                Download
+              </button>
+              <!--<a href="case-study/Case Study_Paytm_EKyc.pdf" download="case-study/Case Study_Paytm_EKyc.pdf" class="btn btn-primary">Download</a>-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--end-->
+      <hr />
+      <!--start-->
+    
+    </div>
+    <!--end-->
+   
+</div>
