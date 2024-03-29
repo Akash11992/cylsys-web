@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { SharedService } from 'src/app/shared/services/shared.service';
 
 @Component({
@@ -20,7 +21,7 @@ export class BecameOurPartnerComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private _router: Router,
-    // private ngxloaderService: NgxUiLoaderService,
+    private ngxloaderService: NgxUiLoaderService,
     private sharedService: SharedService
   ) {}
 
@@ -44,7 +45,7 @@ export class BecameOurPartnerComponent implements OnInit {
 
       organization_type: ['', [Validators.required]],
       expexctations: [''],
-      checkbox: ['', [Validators.required]],
+
     });
   }
 
@@ -96,21 +97,24 @@ export class BecameOurPartnerComponent implements OnInit {
       };
       // console.log('payload', body);
 
-      // this.ngxloaderService.start();
+      this.ngxloaderService.start();
       this.sharedService.SavePartnerRequestEndpointApi(body).subscribe(
         (res: any) => {
-          // this.ngxloaderService.stop();
+          this.ngxloaderService.stop();
           if (res.status) {
-            // this.sharedService.getToastPopup(
-            //   'Request Sent Succesfully!',
-            //   '',
-            //   'success'
-            // );
+            this.sharedService.getToastPopup(
+              'Request Sent Succesfully!',
+              '',
+              'success'
+            );
             this.resetForm();
           }
         },
         (err: any) => {
-          // this.ngxloaderService.stop();
+          this.sharedService.getToastPopup(
+            'Internal server error', '', 'error'
+          );
+          this.ngxloaderService.stop();
         }
       );
     }

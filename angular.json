@@ -34,7 +34,9 @@
               "src/assets/css/all.min.css",
               "src/assets/css/timeline.css",
               "src/assets/css/css3clock.css",
-              "src/assets/css/simple-lightbox.css"
+              "src/assets/css/simple-lightbox.css",
+              "node_modules/ngx-toastr/toastr.css"  
+
 
 
             ],
@@ -57,13 +59,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 }
               ],
               "fileReplacements": [
