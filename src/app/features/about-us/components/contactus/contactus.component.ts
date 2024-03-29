@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { SharedService } from 'src/app/shared/services/shared.service';
 
 @Component({
@@ -18,7 +19,8 @@ export class ContactusComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private _router: Router,
-    private sharedService: SharedService
+    private sharedService: SharedService,
+    private ngxloaderService: NgxUiLoaderService,
   ) { }
 
   ngOnInit(): void {
@@ -84,20 +86,26 @@ export class ContactusComponent implements OnInit {
         requirementBrief: this.contactUsForm.value.requirementBrief,
       };
       // console.log('payload', body);
+      this.ngxloaderService.start();
 
       this.sharedService.SaveRequestEndpointApi(body).subscribe(
         (res: any) => {
+          this.ngxloaderService.stop();
 
           if (res.status) {
-            // this.sharedService.getToastPopup(
-            //   'Request Sent Succesfully!',
-            //   '',
-            //   'success'
-            // );
+            this.sharedService.getToastPopup(
+              'Request Sent Succesfully!',
+              '',
+              'success'
+            );
             this.resetForm();
           }
         },
         (err: any) => {
+          this.sharedService.getToastPopup(
+            'Internal server error', '', 'error'
+          );
+          this.ngxloaderService.stop();
 
         }
       );

@@ -487,6 +487,7 @@ header.sticky {
   line-height: normal;
   padding: 10px;
   line-height: 0;
+  height: 75px;
   border-bottom: 1px solid #c6c6c8;
 }
 
@@ -601,7 +602,7 @@ header.sticky {
   width: 100%;
   object-fit: cover;
   max-width: inherit;
-  height: 60vh;
+  /* height: 60vh; */
   position: relative;
   z-index: -1;
 }
@@ -769,122 +770,121 @@ header.sticky {
 /*our-experience-end*/
 
 .merge-sec {
-  height: calc(100vh - 75px);
+  /* height: calc(100vh - 75px); */
 }
+  /*welcome-revolution*/
+  
+  .welcome-revolution {
+    /*background: linear-gradient(to right, rgba(232, 243, 226, 1) 0%, rgba(225, 241, 238, 1) 51%, rgba(219, 239, 250, 1) 100%);
+      background: linear-gradient(to right, rgb(208, 231, 251) 0%, rgb(226, 252, 255) 51%, rgb(216, 234, 252) 100%);*/
+    background: #011045;
+    padding: 30px 0;
+    /* height: calc(100vh - 74px); */
+  }
+  
+  .welcome-revolution .section-title .heading h2 {
+    color: #fff;
+  }
+  
+  .section-title {
+    text-align: center;
+  }
+  
+  .section-title .heading h2 {
+    color: #022f44;
+    font-size: 26px;
+    /*font-weight: 600;*/
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    /*     margin: 0;*/
+    left: 0;
+    right: 0;
+  }
+  
+  .work .sub-heading p {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  .section-title .sub-heading p {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  .welcome-revolution .services {
+    text-align: center;
+  }
+  
+  .service-heading h5 {
+    padding-top: 5px;
+    color: #011045;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .service-heading h5 a {
+    color: #333;
+  }
+  
+  .service-content p {
+    color: #011045;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: normal;
+  }
+  
+  .services {
+    padding-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .service1-img {
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+    /*float:left; padding-right:10px;*/
+  }
+  
+  button.btn.btn-outline-primary {
+    font-size: 13px;
+  }
+  
+  .welcome-revolution .card-body {
+    padding: 10px 5px;
+    position: absolute;
+    color: #fff;
+    /*height: 28px;*/
+    background: #011045bf;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px solid #ffffff73;
+  }
+  
+  .welcome-revolution .card {
+    border: none;
+  }
 
-/*welcome-revolution*/
-
-.welcome-revolution {
-  /*background: linear-gradient(to right, rgba(232, 243, 226, 1) 0%, rgba(225, 241, 238, 1) 51%, rgba(219, 239, 250, 1) 100%);
-	background: linear-gradient(to right, rgb(208, 231, 251) 0%, rgb(226, 252, 255) 51%, rgb(216, 234, 252) 100%);*/
-  background: #011045;
-  padding: 30px 0;
-  height: calc(100vh - 74px);
-}
-
-.welcome-revolution .section-title .heading h2 {
-  color: #fff;
-}
-
-.section-title {
-  text-align: center;
-}
-
-.section-title .heading h2 {
-  color: #022f44;
-  font-size: 26px;
-  /*font-weight: 600;*/
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 1px;
-  /*     margin: 0;*/
-  left: 0;
-  right: 0;
-}
-
-.work .sub-heading p {
-  margin: 0;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 1px;
-}
-
-.section-title .sub-heading p {
-  margin: 0;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 1px;
-}
-
-.welcome-revolution .services {
-  text-align: center;
-}
-
-.service-heading h5 {
-  padding-top: 5px;
-  color: #011045;
-  font-size: 14px;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
-}
-
-.service-heading h5 a {
-  color: #333;
-}
-
-.service-content p {
-  color: #011045;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: normal;
-}
-
-.services {
-  padding-top: 5px;
-  margin-bottom: 5px;
-}
-
-.service1-img {
-  width: 100px;
-  height: auto;
-  margin: 0 auto;
-  /*float:left; padding-right:10px;*/
-}
-
-button.btn.btn-outline-primary {
-  font-size: 13px;
-}
-
-.welcome-revolution .card-body {
-  padding: 10px 5px;
-  position: absolute;
-  color: #fff;
-  /*height: 28px;*/
-  background: #011045bf;
-  text-align: center;
-  width: 100%;
-  bottom: 0;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: bold;
-  border: 1px solid #ffffff73;
-}
-
-.welcome-revolution .card {
-  border: none;
-}
-
-/*welcome-revolution-end*/
-
-/*client section start*/
-
-.client {
+  /*welcome-revolution-end*/
+  
+ /*client section start*/
+  
+ .client {
   padding: 67px 0;
-  height: calc(100vh - 75px);
+  /* height: calc(100vh - 75px); */
 }
 
 .client .client-slider-section {
@@ -923,11 +923,20 @@ button.btn.btn-outline-primary {
 
 /* end fix */
 
+.owl-theme .owl-dots .owl-dot span,
+.owl-theme .owl-dots .owl-dot.active span {
+  background: transparent !important;
+}
+
 .owl-nav > div {
   margin-top: -26px;
   position: absolute;
   top: 50%;
   color: #cdcbcd;
+}
+.owl-theme .owl-nav {
+  text-align: start; 
+  -webkit-tap-highlight-color: transparent;
 }
 
 .owl-nav i {
@@ -1038,7 +1047,7 @@ button.btn.btn-outline-primary {
 .work {
   padding: 80px 0;
   width: 100%;
-  height: calc(100vh - 75px);
+  /* height: calc(100vh - 75px); */
   background-color: #011045;
   overflow: hidden;
 }
@@ -1100,7 +1109,7 @@ button.btn.btn-outline-primary {
 }
 
 .work-main-slider {
-  margin: 20px 0;
+  margin: 27px 159px;
 }
 
 #work-carousel .owl-dots {
@@ -1145,7 +1154,7 @@ top: 20%;*/
 
 .our_product {
   width: 100%;
-  height: calc(100vh - 75px);
+  /* height: calc(100vh - 75px); */
   padding: 50px 0 0;
   background-color: #fff;
 }
@@ -1358,16 +1367,21 @@ figure.snip0016:hover figcaption::before {
 }
 
 .owl-dots .owl-dot {
-  background-color: #011045;
-  height: 13px;
-  width: 13px;
+  background-color: #fff !important;
+  height: 10px;
+  width: 10px;
   margin: 5px;
   border-radius: 50px;
+  border: 2px solid #011045;
+  outline: none;
+
 }
 
 .owl-dots .owl-dot.active {
-  background-color: #fff;
-  border: 2px solid #011045;
+  background: #fff !important;
+  height: 15px;
+  width: 15px;
+  margin-top: 4px;
 }
 
 .testimonialhome {

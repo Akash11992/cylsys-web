@@ -31,7 +31,7 @@
                   formControlName="first_name"
                   name="firstname" maxlength="40" placeholder="First name" required=""
                     data-name="firstname">
-                    <div class="text-danger" *ngIf="(saveFormControl.first_name.touched || submitted)">
+                    <div class="text-danger" *ngIf="(saveFormControl.first_name.touched)">
                       <div class="text-danger" *ngIf="saveFormControl.first_name.errors?.required">
                         First Name is required!
                       </div>
@@ -51,7 +51,7 @@
                   (keypress)="keyPressAlphabet($event)"
                 
                     data-name="lastname">
-                    <div class="text-danger" *ngIf="(saveFormControl.last_name.touched || submitted)">
+                    <div class="text-danger" *ngIf="(saveFormControl.last_name.touched)">
                       <div class="text-danger" *ngIf="saveFormControl.last_name.errors?.required">
                          Last Name is required!
                       </div>
@@ -68,7 +68,7 @@
                 <div class="_field-wrapper">
                   <input type="text" id="email"                     formControlName="email"
                   name="email" placeholder="E-mail" required="" data-name="email">
-                  <div class="text-danger" *ngIf="(saveFormControl.email.touched || submitted)">
+                  <div class="text-danger" *ngIf="(saveFormControl.email.touched)">
                     <div class="text-danger" *ngIf="saveFormControl.email.errors?.required">
                         Email is required!
                     </div>
@@ -88,7 +88,7 @@
                   maxlength="50" placeholder="Organization name"  formControlName="organization_name"
   
                     data-name="organization_name">
-                    <div class="text-danger" *ngIf="(saveFormControl.organization_name.touched || submitted)">
+                    <div class="text-danger" *ngIf="(saveFormControl.organization_name.touched)">
                       <div class="text-danger" *ngIf="saveFormControl.organization_name.errors?.required">
                         Organization Name is required!
                       </div>
@@ -114,7 +114,7 @@
                     {{ s.organization_type}}
                   </option>
                   </select>
-                  <div class="text-danger" *ngIf="(saveFormControl.organization_type.touched || submitted)">
+                  <div class="text-danger" *ngIf="(saveFormControl.organization_type.touched)">
                     <div class="text-danger" *ngIf="saveFormControl.organization_type.errors?.required">
                       Industry is required!
                     </div>
@@ -135,7 +135,7 @@
                       
               <div class="_button-wrapper _full_width">
                 <button  type="submit"  class="btn _submit"
-                   [class.disabled]="PartnerForm.invalid" (click)="SaveRequestEndpointApi()">
+                   [disabled]="PartnerForm.invalid" (click)="SaveRequestEndpointApi()">
                   Submit
                 </button>
               </div>

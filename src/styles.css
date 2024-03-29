@@ -585,7 +585,7 @@ body {
     border: 2px solid #011045;
   }
   
-  .clippy {
+  /* .clippy {
     position: absolute;
     z-index: 2;
     clip-path: polygon(50% 100%, 100% 0, 100% 100%, 0 100%, 0 0);
@@ -594,13 +594,12 @@ body {
     left: 0;
     background-color: rgb(255, 255, 255);
     height: 120px;
-  }
+  } */
   
   .main-bg {
     width: 100%;
     object-fit: cover;
     max-width: inherit;
-    height: 100vh;
     position: relative;
     z-index: -1;
   }
@@ -768,7 +767,7 @@ body {
   /*our-experience-end*/
   
   .merge-sec {
-    height: calc(100vh - 75px);
+    /* height: calc(100vh - 75px); */
   }
   
   /*welcome-revolution*/
@@ -778,7 +777,7 @@ body {
       background: linear-gradient(to right, rgb(208, 231, 251) 0%, rgb(226, 252, 255) 51%, rgb(216, 234, 252) 100%);*/
     background: #011045;
     padding: 30px 0;
-    height: calc(100vh - 74px);
+    /* height: calc(100vh - 74px); */
   }
   
   .welcome-revolution .section-title .heading h2 {
@@ -883,7 +882,7 @@ body {
   
   .client {
     padding: 67px 0;
-    height: calc(100vh - 75px);
+    /* height: calc(100vh - 75px); */
   }
   
   .client .client-slider-section {
@@ -1046,7 +1045,7 @@ body {
   .work {
     padding: 80px 0;
     width: 100%;
-    height: calc(100vh - 75px);
+    /* height: calc(100vh - 75px); */
     background-color: #011045;
     overflow: hidden;
   }
@@ -1108,8 +1107,8 @@ body {
   }
   
   .work-main-slider {
-    margin: 20px 0;
-  }
+    margin: 27px 159px;
+}
   
   #work-carousel .owl-dots {
     display: flex;
@@ -1153,7 +1152,7 @@ body {
   
   .our_product {
     width: 100%;
-    height: calc(100vh - 75px);
+    /* height: calc(100vh - 75px); */
     padding: 50px 0 0;
     background-color: #fff;
   }
@@ -1378,16 +1377,21 @@ body {
   }
   
   .owl-dots .owl-dot {
-    background-color: #011045;
-    height: 13px;
-    width: 13px;
+    background-color: #fff !important;
+    height: 10px;
+    width: 10px;
     margin: 5px;
     border-radius: 50px;
+    border: 2px solid #011045;
+    outline: none;
+  
   }
   
   .owl-dots .owl-dot.active {
-    background-color: #fff;
-    border: 2px solid #011045;
+    background: #fff !important;
+    height: 15px;
+    width: 15px;
+    margin-top: 4px;
   }
   
   .testimonialhome {
@@ -3697,7 +3701,7 @@ body {
       padding: 50px 0;
     }
     .main-bg {
-      height: 100vh;
+      /* height: 100vh; */
     }
     .work .work-main-slider .work-contain-right {
       text-align: center;

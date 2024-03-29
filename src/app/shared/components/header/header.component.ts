@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SharedService } from '../../services/shared.service';
 import { Router } from '@angular/router';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 
 @Component({
   selector: 'app-header',
@@ -17,7 +18,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private _router: Router,
-    private sharedService: SharedService
+    private sharedService: SharedService,
+    private ngxloaderService: NgxUiLoaderService,
   ) {
 
    }
@@ -109,22 +111,25 @@ this.getAllServicesApi();
       };
       // console.log('payload', body);
 
-      // this.ngxloaderService.start();
+      this.ngxloaderService.start();
       this.sharedService.SaveRequestEndpointApi(body).subscribe(
         (res: any) => {
-          // this.ngxloaderService.stop();
+          this.ngxloaderService.stop();
           if (res.status) {
-            // this.sharedService.getToastPopup(
-            //   'Request Sent Succesfully!',
-            //   '',
-            //   'success'
-            // );
+            this.sharedService.getToastPopup(
+              'Request Sent Succesfully!',
+              '',
+              'success'
+            );
             document.getElementById('myModal')?.click();
             this.resetForm();
           }
         },
         (err: any) => {
-          // this.ngxloaderService.stop();
+          this.sharedService.getToastPopup(
+            'Internal server error', '', 'error'
+          );
+          this.ngxloaderService.stop();
         }
       );
     }
